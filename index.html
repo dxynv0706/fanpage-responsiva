@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Fandom Max Verstappen – Pandinha 🧡</title>
+
+<!-- Fonte Bebas Neue -->
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<style>
+    .titulo-max {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.8rem;       
+  color: #000000;         
+  letter-spacing: 1.5px;  
+  margin: 0;
+  line-height: 1;
+}
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: url('MaxVerstappen.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: #000;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+  }
+  body::after {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.007);
+    z-index: 0;
+  }
+  header {
+    background-color: #d659006e;
+    padding: 1.5rem 1rem;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 2.6rem;
+    color: #fff5e6;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 2px #6b300088;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #home p {
+    text-shadow: 0.5px 0.5px 1px #fff;
+  }
+  #home h2 {
+    font-size: 2.4rem;
+    color: #d65a00;
+    margin-bottom: 1rem;
+    font-family: 'Anton', sans-serif;
+  }
+  #home h3 {
+    font-size: 1.6rem;
+    color: #d65a00;
+
+    margin-top: 1.5rem;
+    margin-bottom: 0.6rem;
+    font-family: 'Anton', sans-serif;
+  }
+  #home p {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+  }
+.img-home-stack {
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(240, 138, 37, 0.4);
+  margin-bottom: 1.2rem;
+  max-width: 100%;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.img-home-stack:hover {
+  box-shadow: 0 0 20px rgba(240, 138, 37, 0.7);
+  transform: scale(1.03);
+}
+
+  .esfera {
+    width: 100px;
+    height: 100px;
+    background-color: #0d1a3f;
+    border: 5px solid #0a1430;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Anton', sans-serif;
+    font-weight: 700;
+    user-select: none;
+    position: relative;
+    color: #fff;
+    margin-left: 1rem;
+  }
+  .numero {
+    font-family: 'Anton', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    pointer-events: none;
+    user-select: none;
+    z-index: 2;
+    color: #f08a25;
+    position: relative;
+    text-shadow: 0 0 6px rgba(240, 138, 37, 0.9);
+  }
+  .ponteiro {
+    width: 4px;
+    height: 40%;
+    background-color: #f08a25;
+    border-radius: 2px;
+    transform-origin: bottom center;
+    transition: transform 0.5s ease;
+    box-shadow: 0 0 8px #f08a25;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    user-select: none;
+    z-index: 1;
+  }
+  .label {
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    font-size: 0.85rem;
+    color: #ccc;
+    user-select: none;
+    text-align: center;
+  }
+  nav {
+    background-color: #f08a2588;
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    padding: 1rem 0;
+    font-weight: 700;
+    font-size: 1.2rem;
+    position: relative;
+    z-index: 1;
+  }
+  nav a {
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  nav a:hover {
+    color: #d65a00;
+    text-decoration: underline;
+  }
+  main {
+    max-width: 900px;
+    margin: 2rem auto 4rem auto;
+    padding: 0 1rem;
+    position: relative;
+    z-index: 1;
+  }
+  section {
+    margin-bottom: 2.5rem;
+  }
+  h2 {
+    font-family: 'Anton', sans-serif;
+    font-size: 2rem;
+    color: #d65a00;
+    border-bottom: 3px solid #d65a00;
+    padding-bottom: 0.4rem;
+    margin-bottom: 1rem;
+  }
+  ul, ol {
+    padding-left: 1.5rem;
+    font-weight: 600;
+  }
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(240, 138, 37, 0.25);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(240, 138, 37, 0.6);
+}
+
+.hidden-gallery {
+  display: none;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+  footer {
+    background-color: #d65a00;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.95rem;
+    color: #fff5e6;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+  }
+  .message-special {
+    font-style: italic;
+    font-size: 1.3rem;
+    text-align: center;
+    color: #8c3e00;
+    margin-top: 1.2rem;
+    font-weight: 600;
+  }
+  /* Calendário */
+  .calendario-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  .card-gp {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    color: #fff;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    min-height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+  }
+  .card-gp:hover {
+    transform: scale(1.03);
+  }
+  .conteudo-gp {
+    padding: 1.5rem;
+    backdrop-filter: brightness(1.1);
+  }
+  .gp-nome {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .gp-info {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #eee;
+  }
+  /* Notícias cards */
+  #news-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+  .news-card {
+    flex: 0 1 30%;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    color: #000;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    text-align: center;
+  }
+  .news-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px rgba(240, 138, 37, 0.8);
+  }
+  .news-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+  }
+  .news-card h3 {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+    color: #d65a00;
+  }
+  .btn-ver-mais {
+    display: block;
+    margin: 1rem auto;
+    background-color: #d65a00;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.4rem;
+    border-radius: 4px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .btn-ver-mais:hover {
+    background-color: #f08a25;
+  }
+  /* Setinha voltar topo */
+  #backToTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #d65a00;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 10px #d65a00cc;
+    z-index: 10000;
+    display: none;
+    user-select: none;
+    transition: background-color 0.3s ease;
+  }
+  #backToTopBtn:hover {
+    background-color: #f08a25;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+.dedicatoria-card {
+  background-color: rgba(247, 127, 8, 0.466);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(240, 138, 37, 0.3);
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 1.3rem;
+  color: #000;
+  line-height: 1.2;
+  max-width: 800px;
+  margin: 0 auto;
+  animation: aparecerCarta 3s ease-in-out;
+}
+
+@keyframes aparecerCarta {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+  <div><h1 class="titulo-max m-0">Max Verstappen</h1>
+</div>
+  <div style="display:flex; gap:1rem;">
+    <div class="esfera" id="dias-esfera" aria-label="Dias restantes">
+      <div class="numero" id="numero-dias">0</div>
+      <div class="ponteiro" id="ponteiro-dias"></div>
+      <div class="label">Dias</div>
+    </div>
+    <div class="esfera" id="horas-esfera" aria-label="Horas restantes">
+      <div class="numero" id="numero-horas">00</div>
+      <div class="ponteiro" id="ponteiro-horas"></div>
+      <div class="label">Horas</div>
+    </div>
+    <div class="esfera" id="minutos-esfera" aria-label="Minutos restantes">
+      <div class="numero" id="numero-minutos">00</div>
+      <div class="ponteiro" id="ponteiro-minutos"></div>
+      <div class="label">Minutos</div>
+    </div>
+    <div class="esfera" id="segundos-esfera" aria-label="Segundos restantes">
+      <div class="numero" id="numero-segundos">00</div>
+      <div class="ponteiro" id="ponteiro-segundos"></div>
+      <div class="label">Segundos</div>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#news">Notícias</a>
+  <a href="#calendar">Calendário</a>
+  <a href="#gallery">Galeria</a>
+  <a href="#fanspace">Carta Aberta</a>
+</nav>
+
+<main>
+<section id="home">
+  <div class="row align-items-start">
+    <!-- Texto à esquerda com destaque visual -->
+    <div class="col-lg-7 col-md-12">
+      <div style="background-color: rgba(240, 138, 37, 0.425); padding: 2rem; border-radius: 12px; box-shadow: 0 0 8px rgba(240, 138, 37, 0.3);">
+        <h2>Max Verstappen</h2>
+        <p>
+          Max Verstappen é um piloto de corrida nascido em 30 de setembro de 1997, em Hasselt, Bélgica, mas tem nacionalidade holandesa. Ele vem de família de pilotos: o pai, Jos Verstappen, também foi piloto de F1, e a mãe, Sophie Kumpen, foi piloto de kart.
+        </p>
+
+        <h3>Carreira inicial:</h3>
+        <p>
+          Max começou no kart muito cedo, seguindo os passos dos pais. Seu talento chamou atenção logo, e ele entrou nas categorias de base do automobilismo com muita rapidez.
+        </p>
+
+        <h3>Fórmula 1:</h3>
+        <p>
+          Estreou na F1 em 2015, com apenas 17 anos, pela equipe Toro Rosso, sendo o piloto mais jovem da história na categoria.
+        </p>
+        <p>
+          Em 2016, foi promovido para a Red Bull Racing durante a temporada e venceu sua primeira corrida no GP da Espanha, tornando-se o mais jovem vencedor de um GP da F1, com 18 anos.
+        </p>
+        <p>
+          Desde então, se tornou um dos principais nomes da categoria, conhecido pelo estilo agressivo e talento bruto.
+        </p>
+
+        <h3>Conquistas recentes:</h3>
+        <p>
+          Em 2021, Max conquistou seu primeiro título mundial de Fórmula 1, numa disputa histórica e acirrada com Lewis Hamilton.
+        </p>
+        <p>
+          Em 2022, repetiu o feito, garantindo seu segundo campeonato com muita dominância, ajudado pela evolução do carro RB18 da Red Bull.
+        </p>
+        <p>
+          É reconhecido por ser um piloto extremamente rápido, consistente e determinado, além de ter um grande carisma com os fãs.
+        </p>
+      </div>
+    </div>
+
+    <!-- Imagens à direita -->
+    <div class="col-lg-5 col-md-12 text-center">
+      <img src="imagens/home/Verstappen.jpg" alt="Max Verstappen pilotando" class="img-home-stack" />
+      <img src="imagens/home/max3.jpg" alt="Max Verstappen comemorando" class="img-home-stack" />
+    </div>
+  </div>
+</section>
+
+<section id="news">
+  <h2>Notícias Recentes</h2>
+  <div id="news-container" role="list" aria-live="polite" aria-label="Notícias sobre Max Verstappen">
+    
+  </div>
+  <button class="btn-ver-mais" id="btnVerMais" aria-label="Ver mais notícias sobre Max Verstappen">Ver mais</button>
+</section>
+
+<section id="calendar">
+  <h2>Calendário de Corridas 2025</h2>
+  <div class="calendario-grid" role="list" aria-label="Calendário de GPs de Fórmula 1">
+    <div class="card-gp" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/3a/Hungaroring.svg');" role="listitem" tabindex="0">
+      <div class="conteudo-gp">
+        <div class="gp-nome">GP da Hungria 🇭🇺</div>
+        <div class="gp-info">28 de julho – Hungaroring</div>
+      </div>
+    </div>
+
+    <div class="card-gp" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/d5/Circuit_de_Spa-Francorchamps.svg');" role="listitem" tabindex="0">
+      <div class="conteudo-gp">
+        <div class="gp-nome">GP da Bélgica 🇧🇪</div>
+        <div class="gp-info">25 de agosto – Spa-Francorchamps</div>
+      </div>
+    </div>
+
+    <div class="card-gp" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/65/Circuit_Zandvoort.svg');" role="listitem" tabindex="0">
+      <div class="conteudo-gp">
+        <div class="gp-nome">GP da Holanda 🇳🇱</div>
+        <div class="gp-info">1 de setembro – Circuit Zandvoort</div>
+      </div>
+    </div>
+
+    <div class="card-gp" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/a9/Monza_track_map.svg');" role="listitem" tabindex="0">
+      <div class="conteudo-gp">
+        <div class="gp-nome">GP da Itália 🇮🇹</div>
+        <div class="gp-info">8 de setembro – Monza</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" aria-label="Galeria de imagens do Max Verstappen">
+  <h2>Galeria</h2>
+
+  <!-- Galeria inicial com as 3 primeiras imagens -->
+  <div class="gallery-grid" role="list">
+    <img src="imagens/galeria/maxgaleria8.jpg" alt="Max Verstappen 1" role="listitem" />
+    <img src="imagens/galeria/maxgaleria4.jpg" alt="Max Verstappen 2" role="listitem" />
+    <img src="imagens/galeria/maxgaleria.jpg" alt="Max Verstappen 3" role="listitem" />
+  </div>
+
+  <!-- Galeria oculta com as demais imagens -->
+  <div class="gallery-grid hidden-gallery" id="maisGaleria" role="list">
+    <img src="imagens/galeria/maxgaleria5.jpg" alt="Max Verstappen 4" role="listitem" />
+    <img src="imagens/galeria/maxgaleria6.jpg" alt="Max Verstappen 5" role="listitem" />
+    <img src="imagens/galeria/maxgaleria7.jpg" alt="Max Verstappen 6" role="listitem" />
+    <img src="imagens/galeria/maxgaleria2.jpg" alt="Max Verstappen 7" role="listitem" />
+    <img src="imagens/galeria/maxgaleria3.jpg" alt="Max Verstappen 8" role="listitem" />
+    <img src="imagens/galeria/maxgaleria9.jpg" alt="Max Verstappen 9" role="listitem" />
+  </div>
+
+  <button class="btn-ver-mais" id="btnVerMaisGaleria" aria-label="Ver mais imagens">Ver mais</button>
+</section>
+
+<section id="fanspace">
+  <h2>Open Letter</h2>
+  <div class="dedicatoria-card" aria-label="Open letter to Max Verstappen">
+    <p>Hi Max,</p>
+    <p>
+      I just wanted to say how much I truly admire you — not only as an incredible driver but also as someone who inspires so many people.
+    </p>
+    <p>
+      Watching you race has been a beacon of light for me during tough times, helping me overcome my anxiety and depression.
+    </p>
+    <p>
+      Thank you so much for being such a source of inspiration and positive energy in my life.
+      I wish you endless success and happiness, always!
+    </p>
+    <p>
+      With love,<br />
+      <strong>Dêyna 🧡</strong>
+    </p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  &copy; 2025 Pandinha – Fã Clube Max Verstappen. Todos os direitos reservados.
+</footer>
+
+<button id="backToTopBtn" aria-label="Voltar ao topo">↑</button>
+
+<script>
+  // Contagem regressiva do próximo GP (exemplo fixo para 28 de julho 2025 14:00)
+  function atualizarContagem() {
+    const dataEvento = new Date('2025-07-28T14:00:00-03:00'); 
+    const agora = new Date();
+    const diff = dataEvento - agora;
+
+    if (diff <= 0) {
+      document.getElementById('numero-dias').textContent = '0';
+      document.getElementById('numero-horas').textContent = '00';
+      document.getElementById('numero-minutos').textContent = '00';
+      document.getElementById('numero-segundos').textContent = '00';
+      return;
+    }
+
+    const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const horas = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutos = Math.floor((diff / (1000 * 60)) % 60);
+    const segundos = Math.floor((diff / 1000) % 60);
+
+    document.getElementById('numero-dias').textContent = dias;
+    document.getElementById('numero-horas').textContent = horas.toString().padStart(2, '0');
+    document.getElementById('numero-minutos').textContent = minutos.toString().padStart(2, '0');
+    document.getElementById('numero-segundos').textContent = segundos.toString().padStart(2, '0');
+
+    // Rotacionar ponteiros (360deg / 60 para segundos e minutos; para horas 360deg / 12)
+    document.getElementById('ponteiro-segundos').style.transform = `translateX(-50%) rotate(${segundos * 6}deg)`;
+    document.getElementById('ponteiro-minutos').style.transform = `translateX(-50%) rotate(${minutos * 6}deg)`;
+    document.getElementById('ponteiro-horas').style.transform = `translateX(-50%) rotate(${(horas % 12) * 30}deg)`;
+    // Dias pode ser um ponteiro especial, aqui só para visual
+    document.getElementById('ponteiro-dias').style.transform = `translateX(-50%) rotate(${(dias % 30) * 12}deg)`;
+  }
+  setInterval(atualizarContagem, 1000);
+  atualizarContagem();
+
+  // Botão "Ver mais" notícias - placeholder para integração futura
+  document.getElementById('btnVerMais').addEventListener('click', () => {
+    alert('Aqui irá carregar mais notícias sobre Max Verstappen!');
+  });
+
+  // Botão "Ver mais" galeria
+  const btnVerMaisGaleria = document.getElementById('btnVerMaisGaleria');
+  const maisGaleria = document.getElementById('maisGaleria');
+  btnVerMaisGaleria.addEventListener('click', () => {
+    if (maisGaleria.style.display === 'grid') {
+      maisGaleria.style.display = 'none';
+      btnVerMaisGaleria.textContent = 'Ver mais';
+      btnVerMaisGaleria.setAttribute('aria-expanded', 'false');
+    } else {
+      maisGaleria.style.display = 'grid';
+      btnVerMaisGaleria.textContent = 'Ver menos';
+      btnVerMaisGaleria.setAttribute('aria-expanded', 'true');
+    }
+  });
+
+  // Botão voltar ao topo
+  const backToTopBtn = document.getElementById('backToTopBtn');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      backToTopBtn.style.display = 'block';
+    } else {
+      backToTopBtn.style.display = 'none';
+    }
+  });
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  });
+</script>
+
+</body>
+</html>
